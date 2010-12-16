@@ -159,12 +159,400 @@ status open
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset space ~
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+אליס שולחת את 
+\begin_inset Formula $g^{a}\left(\mbox{mod }p\right)$
+\end_inset
+
+ מוצפן לפי הססמא שלה.
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ נבחר באקראי והוא שונה בכל פעם שהפרוטוקול מופעל, לכן לתוקף אין דרך לדעת
+ שהוא מצא את הססמא הנכונה - כיוון שאין הוא יודע מה אליס הצפינה באמצעותה.
+\end_layout
+
+\begin_layout Enumerate
+אם איב הקליטה תקשורת בין אליס לשרת, וכן היא גילתה את 
+\begin_inset Formula $a$
+\end_inset
+
+ שבו אליס השתמשה בתקשורת הזו - איב יכולה לבצע התקפת מילון כדי למצא את הססמא
+ של אליס.
+ כדי לעשות זאת איב - 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+תחשב 
+\begin_inset Formula $g^{a}\left(\mbox{mod }p\right)$
+\end_inset
+
+ )
+\begin_inset Formula $g,p$
+\end_inset
+
+ ידועים לכל, 
+\begin_inset Formula $a$
+\end_inset
+
+ ידוע לאיב(
+\end_layout
+
+\begin_layout Itemize
+תעבור על הססמאות 
+\begin_inset Formula $x$
+\end_inset
+
+ מהמילון, ועבור כל אחת מהן -
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+תחשב 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ )
+\begin_inset Formula $f$
+\end_inset
+
+ היא פונקציה ידועה לכל(
+\end_layout
+
+\begin_layout Itemize
+תחשב את 
+\begin_inset Formula $E_{f\left(x\right)}\left(g^{a}\left(\mbox{mod }p\right)\right)$
+\end_inset
+
+, ותשווה לערך שאליס שלחה לשרת.
+ אם הערכים שווים - הססמה של אליס היא קרוב לוודאי 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+גם לאחר השינוי הפרוטוקול איננו חשוף להתקפת מילון על הססמא של אליס.
+ היתרון של איב כעת הוא שיש לה שני זוגות של טקסט גלוי ומוצפן, שהוצפנו באמצעות
+ 
+\begin_inset Formula $E$
+\end_inset
+
+ על פי המפתח המשותף 
+\begin_inset Formula $k$
+\end_inset
+
+, אנו מניחים כי פונקציית ההצפנה היא חזקה והתקפה שמשלבת שני טקסטים גלויים
+ ומוצפני ידועים אינה ידועה, כך שלאיב לא תהיה דרך לגלות את המפתח 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ מכאן - לאיב לא יהיה מידע נוסף בנוגע לססמא של אליס או להודעות שהוצפנו ומכילות
+ את הססמא שלה, והתקפת מילון לא אפשרית - בדומה למצב ב-
+\lang english
+EKE
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+רגיל.
+\end_layout
+
+\begin_layout Enumerate
+לאחר שני השינויים ניתן לבצע התקפת מילון.
+ ההתקפה תתבצע באופן הבא - 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+לכל ססמא 
+\begin_inset Formula $x$
+\end_inset
+
+ מהמילון איב תחשב את 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ ותבצע - 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+פענוח של 
+\begin_inset Formula $E_{w}\left(a\right)$
+\end_inset
+
+ )נשלח בהודעה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\noun default
+\color inherit
+1
+\numeric off
+( על פי המפתח 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+, את הערך נסמן ב-
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+פענוח של 
+\begin_inset Formula $E_{w}\left(g^{b}\left(\mbox{mod }p\right)\right)$
+\end_inset
+
+ )נשלח בהודעה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\noun default
+\color inherit
+2
+\numeric off
+( על פי המפתח 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+, את הערך נסמן ב-
+\begin_inset Formula $g^{B}\left(\mbox{mod }p\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+חישוב של 
+\begin_inset Formula $\tilde{k}\triangleq\left(g^{B}\right)^{A}\left(\mbox{mod }p\right)$
+\end_inset
+
+ )העלאה בחזקה, מודולו 
+\begin_inset Formula $p$
+\end_inset
+
+(
+\end_layout
+
+\begin_layout Itemize
+פענוח 
+\begin_inset Formula $E_{k}\left(challaenge_{S}\right)$
+\end_inset
+
+ )נשלח בהודעה 
+\begin_inset Formula $2$
+\end_inset
+
+( על פי המפתח 
+\begin_inset Formula $\tilde{k}$
+\end_inset
+
+, והשוואה ל-
+\begin_inset Formula $challenge_{S}$
+\end_inset
+
+ )נשלח בהודעה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\noun default
+\color inherit
+3
+\numeric off
+(.
+ אם הערכים שווים הססמא של אליס היא קרוב לוודאי 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+אם נעשה שימוש בצופן שטף או בצופן בלוקים שגודל בלוק קטן או שווה ל-
+\begin_inset Formula $challenge$
+\end_inset
+
+ במוד תפעול 
+\begin_inset Formula $ECB$
+\end_inset
+
+ )או דומה(, תוקף יכול להתחזות לאליס או לשרת ולהשלים את תהליך ההזדהות )אבל
+ - בסופו לא יהיה לתוקף וללקוח/שרת סוד משותף לצורך המשך הצפנת ה-
+\lang english
+session
+\lang hebrew
+(.
+ נציג התקפה שבה התוקף מתחזה לשרת - 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+אליס שולחת 
+\begin_inset Formula $E_{w}\left(g^{a}\left(\mbox{mod }p\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+התוקף שולח מחרוזת אקראית במקום 
+\begin_inset Formula $E_{w}\left(g^{b}\left(\mbox{mod }p\right)\right)$
+\end_inset
+
+ שהשרת היה אמור לשלוח, וכן מחרוזת אקראית נוספת בתור 
+\begin_inset Formula $E_{k}\left(challaenge_{s}\right)$
+\end_inset
+
+, נסמן מחרוזת זו ב-
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אליס מפענחת את המחזורת האקראית הראשונה כאילו הייתה הודעה תקינה מהשרת, מחשבת
+ לפיה 
+\begin_inset Formula $k$
+\end_inset
+
+, ומפענחת על פיו את ההודעה האקראית השניה ומקבלת "אתגר" אקראי כלשהו.
+ כעת היא מוסיפה אליו את האתגר שלה 
+\begin_inset Formula $challenge_{c}$
+\end_inset
+
+ ומצפינה באמצעות 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ כיוון שהבלוקים המוצפנים של שני האתגרים אינם משפיעים זה על זה אליס למעשה
+ שולחת 
+\begin_inset Formula $C||E_{k}\left(challenge_{c}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+התוקף מסיר את 
+\begin_inset Formula $C$
+\end_inset
+
+ מההודעה שקיבל מאליס, ושולח לה בחזרה את 
+\begin_inset Formula $E_{k}\left(challenge_{c}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+תהליך ההזדהות הושלם בהצלחה, אך בהנחה ואליס מצפה להשתמש ב-
+\begin_inset Formula $k$
+\end_inset
+
+ להצפנת המשך התקשורת בינה ובין השרת התוקף לא יוכל להמשיך ולפענח את ההודעות
+ שהיא תשלח לו.
+ באופן שקול תוקף יכול להתחזות למשתמש )שלב 
+\begin_inset Formula $3$
+\end_inset
+
+ הופך להיות פשוט - שרשור של 
+\begin_inset Formula $E_{k}\left(challaenge_{s}\right)$
+\end_inset
+
+ ומחרוזת אקראית שתשמש כ-
+\begin_inset Formula $E_{k}\left(challaenge_{c}\right)$
+\end_inset
+
+(, אך גם במקרה הזה תוקף לא יוכל להמשיך את התקשורת אם השרת יצפה למידע מוצפן
+ על ידי 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 \begin_inset space ~
 \end_inset
