@@ -1,4 +1,4 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -1165,6 +1165,10 @@ CA
  שאינו משתף פעולה עם האתר( על מנת להחליף תעודות - אליס תוכל לראות שהתעודה
  שהאתר ייצר עבור ונשלחת לבוב מכילה מפתח פומבי שונה, ומכך ללמוד שיש מי שמנסה
  לשבש את ההגנה על פרטיותם.
+\begin_inset Newpage clearpage
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1182,6 +1186,242 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+נתאר התקפת מילון על פרוטוקול קרברוס הבסיסי: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+התוקף שולח הודעה 
+\begin_inset Formula $"ID_{c},ID_{s},nonce"$
+\end_inset
+
+ ל-
+\lang english
+KDC
+\lang hebrew
+, כאשר 
+\begin_inset Formula $ID_{c}$
+\end_inset
+
+ הוא מזהה של הלקוח 
+\lang english
+c
+\lang hebrew
+ שאת סיסמתו מעונייינים להשיג, 
+\begin_inset Formula $ID_{s}$
+\end_inset
+
+ הוא מזהה של שירות כלשהו, ו-
+\lang english
+nonce
+\lang hebrew
+ הוא מספר כלשהו שכמובן ידוע לתוקף.
+\end_layout
+
+\begin_layout Itemize
+השרת מחזיר את ההודעה 
+\begin_inset Formula $\left(K_{c,s},nonce\right)$
+\end_inset
+
+ מוצפנת באמצעות מפתח המבוסס על הסיסמה של המשתמש.
+ האופן שבו המפתח נגזר מסיסמת המשתמש ידוע לתוקף.
+ 
+\end_layout
+
+\begin_layout Itemize
+התוקף מנסה לפענח את ההודעה שהתקבלה מהשרת באמצעות גזירת מפתח מכל אחת מהסיסמאות
+ במילון.
+ בכל נסיון, התוקף בודק אם ההודעה מסתיימת ב-
+\lang english
+nonce
+\lang hebrew
+ שהתוקף קבע – אם כן, בסבירות גבוהה, הסיסמה שניסה התוקף היא זו ש-
+\lang english
+c
+\lang hebrew
+ משתמש בה.
+ 
+\end_layout
+
+\begin_layout Itemize
+ברגע שהסיסמה ידועה לתוקף, הוא יכול להתחזות למשתמש באופן שקוף לשרת.
+ 
+\end_layout
+
+\begin_layout Standard
+אותם תנאים מתקיימים גם בפרוטוקול המלא, והתוקף יכול לפעול באותה צורה.
+ למעשה, מאחר והמידע היחיד שדרוש לתוקף כדי להתחזות למשתמש לגיטימי הוא סיסמת
+ המשתמש, אין חשיבות למידע שמוצפן על ידי השרת, ומבחינת התוקף הפרוטוקול הבסיסי
+ והמלא זהים מבחינת התקפת מילון, מאחר ובשניהם 
+\lang english
+nonce
+\lang hebrew
+ נכלל בהודעה המוחזרת למשתמש.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+השינוי אינו פוגע בעמידות הפרוטוקול.
+ למעשה, במימוש של קרברוס, ה-
+\lang english
+timestamp
+\lang hebrew
+ אכן משמש כ-
+\lang english
+nonce
+\lang hebrew
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+השינוי מאפשר לתוקף להתחזות למשתמש לגיטימי ולקבל שירותים בשמו על ידי האזנה
+ – התוקף מאזין לתקשורת בין הלקוח ל-
+\lang english
+TGS
+\lang hebrew
+ ומיירט את ה-
+\lang english
+Session Key
+\lang hebrew
+, 
+\begin_inset Formula $K_{c,s}$
+\end_inset
+
+.
+ כעת ידועים לתוקף 
+\begin_inset Formula $K_{c,s}$
+\end_inset
+
+, 
+\begin_inset Formula $ID_{c}$
+\end_inset
+
+, 
+\lang english
+timestamp
+\lang hebrew
+, והוא מסוגל לייצר 
+\lang english
+Authenticator
+\lang hebrew
+ לגיטימי.
+ בנוסף, התוקף יירט את 
+\begin_inset Formula $Ticket_{c,s}$
+\end_inset
+
+.
+ באמצעותם, התוקף מזדהה מול השרת 
+\lang english
+S
+\lang hebrew
+ בתור המשתמש 
+\lang english
+c
+\lang hebrew
+, ומקבל שירותים.
+\end_layout
+
+\begin_layout Enumerate
+גם שינוי זה מאפשר ל-
+\begin_inset Formula $c'$
+\end_inset
+
+ להתחזות ל-
+\begin_inset Formula $c$
+\end_inset
+
+, באמצעות התקפת שידור חוזר – התוקף מאזין לתקשורת בין הלקוח לשרת 
+\lang english
+S
+\lang hebrew
+, ומיירט הודעת אימות כלשהי, שמכילה 
+\lang english
+Authenticator
+\lang hebrew
+ שמוצפן באמצעות 
+\begin_inset Formula $K_{c,s}$
+\end_inset
+
+, וכרטיס 
+\begin_inset Formula $Ticket_{c,s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+מכיוון שה-
+\lang english
+Authenticator
+\lang hebrew
+ אינו מכיל חתימת זמן, ו-
+\begin_inset Formula $nonce_{3}$
+\end_inset
+
+ הוא מחרוזת אקראית שאורכה חסום, לא ניתן לדרוש שה-
+\lang english
+Authenticator
+\lang hebrew
+ יהיה חד פעמי )דרישה זו תגרום לכך שמשתמש יוכל להזדהות רק 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+ פעמים, כאשר 
+\lang english
+N
+\lang hebrew
+ הוא אורך ה-
+\begin_inset Formula $nonce$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+התוקף כעת יכול לשדר את אותה הודעה ולהתחזות למשתמש 
+\lang english
+c
+\lang hebrew
+.
+ ההתקפה תקפה כל עוד הכרטיס תקף )פרק זמן ארוך(.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+אין פגיעה בעמידות הפרוטוקול – לאחר השינוי אין לתוקף מידע שלא היה בידיו קודם
+ לשינוי.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+עם זאת, לאחר השינוי אין לשרת דרך לדעת מהו 
+\begin_inset Formula $K_{c,s}$
+\end_inset
+
+ ולפענח את ההודעה שהלקוח שולח, והפרוטוקול אינו שמיש.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status open
