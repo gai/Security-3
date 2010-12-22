@@ -554,19 +554,620 @@ session
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
-\begin_inset space ~
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+ייתכן שלשנימשתמשים יופיע אותו מפתח פומבי.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+המפתח הפומבי של של משתמש )למשל - אליס( נגיש לכולם, ולכן כל משתמש אחר )איב(
+ יכול להחליף את המפתח הפומבי שמוצג בפרופיל שלה )איב( כך שיהיה זהה למפתח
+ הפומבי שמופיע אצל אליס.
+ בנוסף, אך בסבירות נמוכה עד זניחה, ייתכן ששני משתמשים הגרילו את אותו מפתח
+ פרטי ולכן יצרו את אותו מפתח פומבי.
+\end_layout
+
+\begin_layout Standard
+אפשרות אחרת היא שבעל האתר יחליף את המפתח הפומבי שמופיע בפרופיל, לצרכיו הפרטיים,
+ כפי שנתאר בהמשך.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+השיטה לא בהכרח שומרת על סודיות ההודעות, נתאר התקפה שבעל האתר יכול לבצע -
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+ברגע שאליס מעלה מפתח פומבי לפרטיה באתר, בעל האתר שומר את המפתח הפומבי הזה
+ אצלו, ומחליף את המפתח הפומבי שיופיע בפרופיל של אליס במפתח פומבי אחר, שהוא
+ מכיר את המפתח הפרטי המתאים לו )המפתח הפומבי של בעל האתר(.
+\end_layout
+
+\begin_layout Standard
+כאשר בוב ישלח הודעה לאליס - ההודעה עוברת דרך בעל האתר, הוא יפענח אותה ע"פ
+ המפתח הפרטי שלו )שכן בוב הצפין אותה על פי המפתח הפומבי שלו, שהופיע בפרופיל
+ של אליס(, בעל האתר יקרא את ההודעה ואז יצפין אותה לפי המפתח הפומבי המקורי
+ של אליס ויעביר אותה אליה.
+ אליס תקבל את ההודעה של בוב, מוצפנת ע"פ המפתח הפומבי שהיא בחרה.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+אין שיטה שתוכל להבטיח שא' ו-ב' שאינם מכירים זה את זה, כל אחד מהם בנפרד,
+ אכן הבעלים של המפתח הפומבי שמוצג בפרטיו האישיים מבלי שיחלקו מראש סוד משותף
+ או שיקבלו עזרה מצד ג' כלשהו )או מהאתר(.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+כל פרוטוקול שנציע שאינו מבוסס על גורם אמין מאשר חשוף להתקפת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang english
+man in the middle
+\lang hebrew
+, לכן בעולם האמיתי יש צורך ב-
+\lang english
+CA
+\lang hebrew
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+תעודה דיגיטלית )
+\lang english
+certificate
+\lang hebrew
+( היא מחזורת המכילה - זיהוי של המשתמש )שם משתמש(, המפתח הפומבי שלו, תאריך
+ תפוגה )של התעודה(, שם ה-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+המנפיק וחתימה של ה-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+המנפיק על כל השדות הללו.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+תפקידה של התעודה הוא לאפשר למשתמש )אליס( לוודא שהמפתח הפומבי של משתמש אחר
+ )בוב( אכן משוייך לבוב ולא לגורם זדוני אחר שהחליף את המפתח הפומבי של בוב.
+ אליס סומכת על ה-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+ועל כן הזיהוי של בוב באמצעות חתימה של ה-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+מאפשרת לה לדעת שזה הוא אכן המפתח הפומבי הנכון.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+על מנת שה-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+יהיה אמין בעיני משתמשיו הוא חייב לוודא את הזהות של המשתמשים להם הוא חותם
+ על התעודות.
+ הגורם המאשר עוקב אחרי תעודות שאינן אמינות )כי המפתח הפרטי התגלה, למשל(
+ ומפרסם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang english
+CRL
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ שמכיל רשימה של כאלו.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+זה מה שהם רצו כאן?
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset space ~
-\end_inset
-
-
+על פי רמת האבטחה הנדרשת - המשתמשים יוכלו לפגוש פיזית את נציג ה-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+ולאמת את המפתח הפומבי שלו, הם יוכלו להשתמש במנגנון
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang english
+PKI
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+כדי לאשר את זהות ה-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+על פי זהותו של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+אחר שהם כבר מכירים וסומכים עליו )וחתם ל-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+החדש(.
+ לחילופין )אם לא נדרשת רמת וודאות גבוהה( יוכלו לסמוך על המפתח הפומבי של
+ ה-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+שמופיע במקום ציבורי כלשהו וידוע לכולם.
 \end_layout
 
+\begin_layout Enumerate
+בוב, שיודע את המפתח הפומבי של ה-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+וסומך עליו )כפי שהוסבר לעיל( מקבל תעודה דיגיטלית שהונפקה עבור אליס, מפענח
+ את החתימה שבסופה על פי המפתח הפומבי של ה-
+\lang english
+CA
+\lang hebrew
+, ואם החתימה אכן תואמת לשאר השדות בתעודה הרי שהתעודה הונפקה לאליס על ידי
+ ה-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+והמפתח הפומבי שמופיע בה הוא אכן המפתח הפומבי של אליס )אם התעודה טרם פקעה,
+ ואינה מופיעה ב-
+\lang english
+CRL
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+שפורסמו על ידי ה-
+\lang english
+CA
+\lang hebrew
+(.
+\end_layout
+
+\begin_layout Enumerate
+ה-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+לא חייב להיות נגיש לצורך ווידוא אמינות התעודה )אלא רק לצורך יצירתה( - כפי
+ שניתן לראות מאופן הווידוא שהוצג לעיל.
+ אבל, אם בוב מעוניין לדעת בוודאות גמורה שהתעודה עדיין בתוקף ייתכן שהוא יהיה
+ מעוניין לקבל את ה-
+\lang english
+CRL
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+העדכני ביותר בזמן הווידוא, ולכן יהיה עליו לתקשר עם ה-
+\lang english
+CA
+\lang hebrew
+.
+\end_layout
+
+\begin_layout Enumerate
+שימוש באתר כ-
+\lang english
+CA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+אינו מוסיף לאמינות.
+ כמו בסעיף ב' - כאשר בוב יבקש מהאתר את התעודה של אליס בעל האתר ישלח לו תעודה
+ "מזוייפת" ובה המפתח הפומבי של בעל האתר )הוא יכול להכין תעודה כזו, כי הוא
+ ה-
+\lang english
+CA
+\lang hebrew
+(.
+ בוב יבדוק את אמינות התעודה ויקבל כי היא אמינה )בעל האתר הוא ה-
+\lang english
+CA
+\lang hebrew
+(, ולכן ישלח הודעה מוצפנת תחת המפתח הפומבי של בעל האתר.
+ בעל האתר יפענח את ההודעה )על ידי המפתח הפרטי שלו(, יעשה בה כרצונו, ולאחר
+ מכן יצפין אותה על פי המפתח הפומבי האמיתי של אליס וישלח את ההודעה אליה -
+ כך שהיא תוכל לפענח אותה.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+נשים לב - אם אליס ובוב ישתמשו באמצעי תקשורת אחר )לא בהכרח בטוח, אבל כזה
+ שאינו משתף פעולה עם האתר( על מנת להחליף תעודות - אליס תוכל לראות שהתעודה
+ שהאתר ייצר עבור ונשלחת לבוב מכילה מפתח פומבי שונה, ומכך ללמוד שיש מי שמנסה
+ לשבש את ההגנה על פרטיותם.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 \begin_inset space ~
 \end_inset
