@@ -398,7 +398,7 @@ EKE
 
 \begin_layout Itemize
 פענוח 
-\begin_inset Formula $E_{k}\left(challaenge_{S}\right)$
+\begin_inset Formula $E_{k}\left(challenge_{S}\right)$
 \end_inset
 
  )נשלח בהודעה 
@@ -477,7 +477,7 @@ session
 \end_inset
 
  שהשרת היה אמור לשלוח, וכן מחרוזת אקראית נוספת בתור 
-\begin_inset Formula $E_{k}\left(challaenge_{s}\right)$
+\begin_inset Formula $E_{k}\left(challenge_{s}\right)$
 \end_inset
 
 , נסמן מחרוזת זו ב-
@@ -536,11 +536,11 @@ session
 \end_inset
 
  הופך להיות פשוט - שרשור של 
-\begin_inset Formula $E_{k}\left(challaenge_{s}\right)$
+\begin_inset Formula $E_{k}\left(challenge_{s}\right)$
 \end_inset
 
  ומחרוזת אקראית שתשמש כ-
-\begin_inset Formula $E_{k}\left(challaenge_{c}\right)$
+\begin_inset Formula $E_{k}\left(challenge_{c}\right)$
 \end_inset
 
 (, אך גם במקרה הזה תוקף לא יוכל להמשיך את התקשורת אם השרת יצפה למידע מוצפן
@@ -568,12 +568,12 @@ status open
 
 \begin_deeper
 \begin_layout Enumerate
-ייתכן שלשנימשתמשים יופיע אותו מפתח פומבי.
+ייתכן שלשני משתמשים יופיע אותו מפתח פומבי.
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
-המפתח הפומבי של של משתמש )למשל - אליס( נגיש לכולם, ולכן כל משתמש אחר )איב(
+המפתח הפומבי של משתמש )למשל - אליס( נגיש לכולם, ולכן כל משתמשת אחר )איב(
  יכול להחליף את המפתח הפומבי שמוצג בפרופיל שלה )איב( כך שיהיה זהה למפתח
  הפומבי שמופיע אצל אליס.
  בנוסף, אך בסבירות נמוכה עד זניחה, ייתכן ששני משתמשים הגרילו את אותו מפתח
@@ -1226,7 +1226,7 @@ Ultimate trust
 \end_layout
 
 \begin_layout Enumerate
-ביבי חתם ללימור סילבן וברק, לכן הוא המפתחות שלהם לגיטימיים.
+ביבי חתם ללימור סילבן וברק, לכן המפתחות שלהם לגיטימיים.
 \end_layout
 
 \begin_deeper
@@ -1326,8 +1326,8 @@ Ultimate trust
 
 \begin_deeper
 \begin_layout Standard
-שטרית ייצר מפתח זו מפתח פרטי-פומבי חדשים, שישמשו אותו כמפתח פומבי-פרטי מזוייפים
- עבור שטרית, וכן זוג נוסף שישמשו אותו כמפתח פומבי-פרטי מזוייפים עבור סילבן.
+שטרית ייצר זוג מפתחות פרטי-פומבי חדש, שישמש אותו כזוג מפתחות פומבי-פרטי מזוייף
+ עבור בוגי, וכן זוג נוסף שישמש אותו כזוג מפתחות פומבי-פרטי מזוייף עבור סילבן.
 \end_layout
 
 \begin_layout Standard
