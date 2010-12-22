@@ -1,0 +1,39 @@
+digraph G {
+ node [shape = diamond]; 
+ 	BB
+ node [shape = box]; 
+ 	Limor
+ 	Hertzog
+ 	Kachlon
+ node [shape = octagon]; 
+  Silvan
+  Bugi
+  Liberman
+ node [shape = ellipse];
+  BB -> Silvan
+  BB -> Limor
+  BB -> Barak
+  BB -> Liberman
+  Bugi -> Limor
+  Bugi -> Barak
+  Bugi -> Kachlon
+  Bugi -> Mofaz
+  Limor -> Hertzog
+  Limor -> Peretz
+  Limor -> Silvan
+  Limor -> AbuMazen
+  Kachlon -> Hertzog
+  Kachlon -> AbuMazen
+  Barak -> Fuad -> Barak
+  Silvan -> Barak
+  Silvan -> Kachlon
+  Silvan -> Hillary
+  Liberman -> Mofaz
+  Hertzog -> Limor
+  Hertzog -> Yishai
+  Hertzog -> AbuMazen
+  Mofaz -> AbuMazen
+  Peretz -> Peretz
+ 
+  
+}

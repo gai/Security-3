@@ -22,7 +22,7 @@
 \paperfontsize default
 \spacing single
 \use_hyperref false
-\papersize default
+\papersize a4paper
 \use_geometry false
 \use_amsmath 1
 \use_esint 1
@@ -1169,11 +1169,182 @@ CA
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
-\begin_inset space ~
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נבנה את מחזיק המפתחות של ביבי -
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Q4A.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כאן מעויין הוא ביבי עצמו )
+\lang english
+Ultimate trust
+\lang hebrew
+(, מתומנים הם מי שביבי סומך עליהם לחלוטין, מלבנים הם מי שביבי סומך עליהם
+ באופן חלקי, וחץ מאליס לבוב מסמן שאליס חתמה על המפתח של בוב ושלחה לביבי.
+\end_layout
+
+\begin_layout Standard
+כעת קל לראות -
+\end_layout
+
+\begin_layout Enumerate
+ביבי חתם ללימור סילבן וברק, לכן הוא המפתחות שלהם לגיטימיים.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+אף אחד לא חתם לבוגי, לכן המפתח שלו לא לגיטימי.
+\end_layout
+
+\begin_layout Standard
+ליברמן חתם למופז, ביבי סומך לחלוטין על ליברמן )והמפתח שלו לגיטימי(, לכן
+ המפתח של מופז לגיטימי.
+\end_layout
+
+\begin_layout Standard
+סילבן חתם להילרי כחלון וברק, ביבי סומך לחלוטין על סילבן )והמפתח שלו לגיטימי(,
+ לכן המפתחות של הילרי כחלון וברק לגיטימיים.
+\end_layout
+
+\begin_layout Standard
+רק ברק חתם לפואד, אבל ביבי לא סומך על ברק, לכן המפתח של פואד לא לגיטימי.
+\end_layout
+
+\begin_layout Standard
+רק לימור )פרט לפרץ עצמו( חתמה לפרץ, אבל ביבי סומך על לימור רק באופן חלקי
+ ולכן המפתח של פרץ לא לגיטימי.
+\end_layout
+
+\begin_layout Standard
+כחלון ולימור חתמו להרצוג, ביבי סומך על שניהם באופן חלקי והמפתחות שלהם לגיטימיים
+ - לכן המפתח של הרצוג לגיטימי.
+\end_layout
+
+\begin_layout Standard
+רק הרצוג חתם לישי, אבל ביבי סומך על הרצוג רק באופן חלקי ולכן המפתח של ישי
+ לא לגיטימי.
+\end_layout
+
+\begin_layout Standard
+כחלון, הרצוג ולימור חתמו לאבו-מאזן, ביבי סומך על שלושתם באופן חלקי והמפתחות
+ של שלושתם לגיטימיים - לכן המפתח של אבו-מאזן לגיטימי.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ביבי חתם ללימור סילבן וברק, לכן הוא המפתחות שלהם לגיטימיים.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+אף אחד לא חתם לבוגי, לכן המפתח שלו לא לגיטימי.
+\end_layout
+
+\begin_layout Standard
+ליברמן חתם למופז, ביבי סומך לחלוטין על ליברמן )והמפתח שלו לגיטימי(, לכן
+ המפתח של מופז לגיטימי.
+\end_layout
+
+\begin_layout Standard
+סילבן חתם להילרי כחלון וברק, ביבי סומך לחלוטין על סילבן )והמפתח שלו לגיטימי(,
+ לכן המפתחות של הילרי כחלון וברק לגיטימיים.
+\end_layout
+
+\begin_layout Standard
+רק ברק חתם לפואד, אבל ביבי לא סומך על ברק, לכן המפתח של פואד לא לגיטימי.
+\end_layout
+
+\begin_layout Standard
+רק לימור )פרט לפרץ עצמו( חתמה לפרץ, אבל ביבי סומך על לימור רק באופן חלקי
+ ולכן המפתח של פרץ לא לגיטימי.
+\end_layout
+
+\begin_layout Standard
+כחלון ולימור חתמו להרצוג, ביבי סומך על שניהם באופן חלקי ואבל 
+\begin_inset Formula $y=3$
+\end_inset
+
+ לכן למרות שהמפתחות שלהם לגיטימיים - המפתח של הרצוג לא לגיטימי.
+\end_layout
+
+\begin_layout Standard
+רק הרצוג חתם לישי, אבל ביבי סומך על הרצוג רק באופן חלקי ובכל מקרה המפתח
+ של הרצוג לא לגיטימי ולכן המפתח של ישי לא לגיטימי.
+\end_layout
+
+\begin_layout Standard
+כחלון, הרצוג ולימור חתמו לאבו-מאזן, ביבי סומך על שלושתם באופן חלקי אבל רק
+ המפתחות של כחלון ולימור לגיטימיים - לכן המפתח של אבו-מאזן לא לגיטימי )גם
+ מופז חתם לאבו מאזן, אבל ביבי לא סומך על מופז(.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+שטרית מעוניין לגרם לביבי לחשוב שהמסמך נשלח מבוגי, לצורך כך הוא צריך לגרום
+ לביבי לסמוך על מפתח פומבי )שקרי( של בוגי.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+שטרית ייצר מפתח זו מפתח פרטי-פומבי חדשים, שישמשו אותו כמפתח פומבי-פרטי מזוייפים
+ עבור שטרית, וכן זוג נוסף שישמשו אותו כמפתח פומבי-פרטי מזוייפים עבור סילבן.
+\end_layout
+
+\begin_layout Standard
+כעת שטרית ישלח לביבי בשם סילבן חתימה על המפתח השקרי של שטרית, באמצעות המפתח
+ השקרי של סילבן.
+ ביבי סומך לחלוטין על סילבן, ואינו מוודא שהמפתח שבעזרתו נחתם האישור הוא
+ מפתח לגיטימי )ואכן, הוא לא!(, לכן ביבי מקבל את המפתח השקרי של בוגי כמפתח
+ לגיטימי.
+\end_layout
+
+\begin_layout Standard
+סילבן ישלח לביבי מסמך בשם בוגי, ויחתוך עליו באמצעות המפתח הפרטי השקרי של
+ בוגי.
+ המפתח מתאים למפתח הפומבי שהפך ללגיטימי בעיני ביבי, ולכן ביבי יאמין שהמסמך
+ נשלח מבוגי.
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_body
 \end_document
