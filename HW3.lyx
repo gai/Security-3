@@ -1,4 +1,4 @@
-#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -744,7 +744,6 @@ CA
 \end_layout
 
 \end_deeper
-
 \begin_layout Enumerate
 שתי דרישות החלות על ה-
 \lang english
@@ -768,6 +767,8 @@ CA
 \noun default
 \color inherit
 הן-
+\end_layout
+
 \begin_deeper
 \begin_layout Itemize
 קיום דרישות מחמירות בתחום אבטחת המידע, כך שהמידע הפרטי של ה-
@@ -793,6 +794,7 @@ CA
 \color inherit
 לא יגיע לידיו של תוקף.
 \end_layout
+
 \begin_layout Itemize
 עמידה בדרישות כלכליות, כך שמצד אחד ה-
 \lang english
@@ -815,12 +817,11 @@ CA
 \bar default
 \noun default
 \color inherit
-אינו בסכנה של פשיטת רגל, ומצד שני תוקף אינו יכול להשיג מידע פרטי על ידי מתן שוחד ותמריצים כלכליים.
+אינו בסכנה של פשיטת רגל, ומצד שני תוקף אינו יכול להשיג מידע פרטי על ידי
+ מתן שוחד ותמריצים כלכליים.
 \end_layout
+
 \end_deeper
-\end_layout
-
-
 \begin_layout Enumerate
 על פי רמת האבטחה הנדרשת - המשתמשים יוכלו לפגוש פיזית את נציג ה-
 \lang english
